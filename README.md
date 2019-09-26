@@ -1,5 +1,5 @@
 # Papyri Negimariae Magicae
-Book of spells for Ken Akamatsu's *Negima!* series in Mundus Vetus style.
+Book of spells for Ken Akamatsu's *Negima!* series in Mundus Magicus style.
 
 ## Compatibility
 The source code is currently compatible with LuaLaTeX + [EB Garamond](https://github.com/georgd/EB-Garamond) ("original", v0.016) by Georg Duffner, not with [EB Garamond 12](https://github.com/octaviopardo/EBGaramond12) by Duffner & Octavio Pardo.
