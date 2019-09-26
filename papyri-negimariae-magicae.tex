@@ -1,0 +1,703 @@
+\PassOptionsToPackage{unicode=true}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+\documentclass[12pt]{book}
+\usepackage{xparse}
+\usepackage[sc]{titlesec}
+\usepackage{fontspec}
+\usepackage{luatexja}
+\usepackage{polyglossia}
+\ltjsetparameter{jacharrange={-2,-3}}
+% \defaultfontfeatures{
+%   now defined in .fontspec file
+% } 
+\setdefaultlanguage[variant=medieval]{latin}
+\setotherlanguage{english}
+\setotherlanguage[variant=ancient]{greek}
+\setotherlanguage{russian}
+\setmainfont[
+  Script = Latin,
+  Language = Latin,
+]{My Gar 12}
+\newfontfamily\englishfont[
+  Script = Default,
+  Language = Default,
+  StylisticSet = 1,
+]{My Gar 12}
+\newfontfamily\cyrillicfont[
+  Script = Cyrillic,
+  Language = Default,
+]{My Gar 12}
+\newfontfamily\greekfont[
+  Script = Greek,
+  Language = Default,
+]{My Gar 12}
+\usepackage{csquotes}
+\DeclareQuoteStyle{latin}
+  {\guillemotleft}{\guillemotright}
+  {\guilsinglleft}{\guilsinglright}
+\renewcommand{\bfseries}{\scshape}
+\newcommand{\mymarkfont}[1]{\textnormal{\textsc{#1}}}
+\renewcommand{\chaptermark}[1]{\markboth{\mymarkfont{\chaptername\ \thechapter.\ #1}}{}}
+\renewcommand{\sectionmark}[1]{\markright{\mymarkfont{\thechapter.\thesection.\ #1}}}
+\newcommand{\reconst}{*}
+\newcommand{\ennote}[1]{\textenglish{[EN] #1}}
+\NewDocumentCommand \cantgrc { m } {\textgreek{#1}}
+\NewDocumentCommand \magia { m } {\textsc{#1}}
+\NewDocumentCommand \magiaact { m } {\emph{#1}}
+\NewDocumentCommand \artifact { m } {\magia{#1}}
+\NewDocumentCommand \magiaarg { m } {\emph{#1}}
+\NewDocumentCommand \magiacapt { m } {\emph{#1}}
+\NewDocumentCommand \magiajp { m o o }
+  {%
+    #1%
+    \IfNoValueTF{#2}
+      {\relax}
+      {\magiacapt{#2}}%
+    \IfNoValueTF{#3}
+      {\relax}
+      {~/~\magia{#3}}}
+\NewDocumentCommand \artifactjp { m o o }
+ {\magiajp{#1}[#2][#3]}
+\NewDocumentCommand \magiagrc { s m }
+  {%
+    \IfBooleanTF{#1}
+      {\magia{#2}}
+      {\textgreek{\magia{#2}}}}
+\usepackage{hyperref}
+\hypersetup{
+  pdftitle={Papyri Negimariæ Magicæ},
+  breaklinks=true,
+}
+\newcommand{\myver}{0.8.0}
+\newcommand{\mydate}{2019-09-26\\\textenglish{v\myver}}
+\newcommand{\mytitle}{\textsc{Papyri Negimariæ Magicæ.}}
+\newcommand{\myname}{Kensuke Sano.}
+\title{\mytitle}
+\date{\mydate}
+\author{\myname}
+
+
+\begin{document}
+
+\frontmatter
+
+\maketitle
+\tableofcontents
+
+\mainmatter
+
+\chapter{Actuatio.}\label{actuatio}
+
+\begin{itemize}
+  \item Discipuli/-æ: \magiaact{Practe bigi nar}
+  \item Negius Springfieldes: \magiaact{Ras tel ma scir magister}
+  \item Iue Aiase: \magiaact{Vor so kratika socratica}
+  \item Tiao Linsien: \magiaact{Last tale my magic skill magister}
+  \item Evangelina Athanasia Ecaterina Macdovell: \magiaact{Lic lac la lac lilac}
+  \item Mei Sacura: \magiaact{Maple naple à la mode}
+  \item Megumi Natume: \magiaact{Rap tiap la tiap ragpur}
+  \item Niziuuin Mituru: \magiaact{Nicman pizaman fucahireman}
+  \item Cataragi: \magiaact{Dig dir dilic volholl}
+  \item \textrussian{Анна Юрьевна Коколова}: \magiaact{Fortis la tius lilith lilioth}
+  \item Collett Farandole: \magiaact{Anette ti net garnet}
+  \item Emily Sevensheep: \magiaact{Tarot carrot charlotte}
+  \item Beatrix Monroe: \magiaact{Mintir mintis freesia}
+  \item J von Katze: \magiaact{High tea mighty wendy}
+  \item S du chat: \magiaact{Paknam tinats coconuts}
+  \item Lan Faw: \magiaact{Pippilna papyrna parianna}
+  \item Albireo Imma: \magiaact{Papyrus tapirus long jing kou}
+  \item Conoemon Conoe: \magiaact{Murakumo rurakumo yakumotatsu}
+  \item Fate Averruncus: \magiaact{\textrussian{Висю тал ли сютал вангэит}}
+  \item Atre: \magiaact{Meralga merazad nasi goreng}
+  \item Adad: \magiaact{Aqueri etarna dead sea}
+  \item Sayoko: \magiaact{Alwell falwell velvet}
+  \item Kirie: \reconst{}\magiaact{Leque-que salier li lotus}
+\end{itemize}
+
+
+\chapter{Magia.}\label{magia}
+\section{Prior.}\label{prior}
+
+\begin{itemize}
+  \item \magia{Ardescat}.
+  \item \magia{Vente}. / \magia{Vente Nos}.
+  \item \magia{Hiscet}.
+  \item \magia{Vestigem}.
+  \item \magia{Lux}.
+  \item \magia{Me Armet}.
+  \item \magia{Vestio}.
+  \item \magia{Scutum Floreum}.
+  \item \magia{Globus Captans}.
+  \item Tui gratia Iouis gratia sit. \magia{Cura}.
+  \item Age nascatur potio amoris \textelp{}
+  \item Aer, aer, amplificet mammas \textelp{}
+  \item \magia{Deflexio}.
+  \item \magia{Reflexio}.
+  \item \magia{Dispulsatio}.
+  \item \magia{Se Invertat/-tant}.
+  \item Fragrantia floris, meis amicis uigorem uitalitatem auram salutarem. \magia{Refectio}.
+  \item \magia{Delustro Torporis}.
+  \item \magia{Saltent Penicilli}.
+  \item Nympha somnii regina Mæve, portam aperiens ad se me/nos alliciat \textelp{}
+  \item Mater Musarum Mnemosyne, ad se me/nos alliciat \textelp{}
+  \item Tria fila nigra promissiua, mihi limitationem per tres dies \textelp{}
+  \item \magia{Se Dissolvant Circumstantia Falsa}.
+  \item Hexagramma et pentagramma, malos spiritus sigillent. \magia{Lagena Signatoria}.
+  \item \magiaact{Man-man-tero-tero} \textelp{} \magia{Infernus Scholasticus}.
+  \item \magiagrc{Κρατιστη Αιγις}.
+\end{itemize}
+
+
+\subsection{Exarmatio.}\label{exarmatio}
+
+\begin{itemize}
+  \item \magia{Flans/Frigerans/Calefaciens Exarmatio}.
+  \item \magia{Ad Summam Exarmatio}.
+\end{itemize}
+
+\subsection{Volatio.}\label{volatio}
+
+\begin{itemize}
+  \item \magia{Mea Virga}.
+  \item \magia{Volatio}.
+  \item \magia{Leuitatio}.
+  \item \magia{Scopæ Volent}.
+  \item \magia{Acceleret}.
+  \item \magia{Maxia Acceleratio}.
+  \item \magia{Mobiliter}.
+  \item \magia{Rapide Subsistat}.
+\end{itemize}
+
+\subsection{Euocatio.}\label{evocatio}
+
+\begin{itemize}
+  \item Euocatio Valcyriarum, contubernalia gladiaria: \magia{Age Capiant} / \magia{Contra Pugnent}.
+  \item Euocatio spiritualis de septendecim Valcyriis mortiferis \textelp{}
+  \item Euocatio spiritualis de undetriginta Salamandris lanciferis \textelp{}
+\end{itemize}
+
+\subsection{Confirmatio.}\label{confirmatio}
+\begin{itemize}
+  \item \magia{Confirmatio Glacialis}.
+  \item \magia{Confirmatio Fulminans}.
+\end{itemize}
+
+\subsection{Emissio.}\label{emissio}
+
+Artis specialis \magiaarg{Flos Nocticulus}, limitatus per triginta secundas,
+sine cantu clauis mouens sit \magiaarg{Dominus Aerialis}, \magiaarg{\magia{Magia}},
+\magia{Dilatio Effectus}.
+---\magiaarg{Dominus Aerialis}, \magia{Emittam}.
+
+\subsection{Sagitta Magica.}\label{sagitta-magica}
+
+\begin{itemize}
+  \item \magia{Sagitta Magica Una Lux/Fulguratio/Ignis}.
+  \item \magiaarg{N} spiritus lucis, coeuntes sagittent inimicum / inimicos sagittent. \magia{S.~M.~Series Lucis / Conuergentia Lucum}.
+  \item \textelp{} \magia{Series Obscuri}.
+  \item \textelp{} \magia{Series Sabulonis}.
+  \item \magiaarg{N} s.~glaciales, coeuntes inimicum concidant. \magia{S.~M.~Series Glacialis}.
+  \item \magiaarg{N} s.~ignis / ignis obscurantis, coeuntes inimicum incendant. \magia{S.~M.~Series Ignis / Ignis Obscurantis}.
+  \item \magiaarg{N} s.~aeriales, uinculum facti inimicum captent. \magia{S.~M.~Aer Capturæ}.
+  \item \magiaarg{N} s.~aeriales, coeuntes \textelp{} \magia{Conuergentia/Series Fulguralis}.
+  \item \textelp{} \magia{Conuergentia Aquarius}.
+\end{itemize}
+
+\section{Elementum.}\label{elementum}
+\subsection{Aerialis.}\label{aerialis}
+
+\begin{itemize}
+  \item \magia{Flans Paries Aerialis}.
+  \item Flet une uente. \magia{Flans Saltatio Puluerea}.
+  \item Vertatur tempestas ueris, nobis protectionem aerialem. \magia{Flans Paries Venti Vertentis}.
+  \item Vertatur tempestas æstiua, illis carcarem circumuertentem. \magia{Flans Carcar Venti Vertentis}.
+  \item Elementa aerialia, uenti spirantes, cito adeuntes ab inimicis meis me defendant. \magia{Limes Aerialis}.
+  \item Pullulantes pulli, uinculum facti inimicum captent \textelp{}
+  \item Veniant spiritus terrestres florentes,
+        cum flore somniali sub cæro percurrat una tempestas.
+        \magia{Veris Tempestas Florens}.
+\end{itemize}
+
+\subsection{Fulguralis.}\label{fulguralis}
+
+\begin{itemize}
+  \item Veniant spiritus aeriales fulgurientes,
+        cum fulguratione flet tempestas austrina.
+        \magia{Iouis Tempestas Fulguriens}.
+  \item Vnus fulgor concidens noctem, in mea manu ens inimicum edat. \magia{Fulguratio Albicans}.
+  \item \cantgrc{Κενότητος ἀστράψατω δὲ τεμέτω. \magiagrc*{Διος Τυκος}.}
+  \item Locos umbræ regnans, Scathach,
+        in manum meam det iaculum dæmonium cum spinis triginta. \magia{Iaculatio Fulgoris}.
+  \item \cantgrc{Τὸ συμβόλαιον διακονείτω μοί, βασιλεῦ Οὐρανιώνων, ἐπιγενηθήτω, αἰθαλους κεραυνὲ ὃς Τιτῆνας ϕθείρειν, ἑκατοντάκις καὶ χιλιάκις ἀστραψάτω. \magiagrc*{Χιλιπλ' Αστραπη}.}
+  \begin{itemize}
+    \item ---\cantgrc{ϕθείρειν}, iactum extendentes circuli exsistant,
+          captent obiecta a primum ad decimum, area constet,
+          intus se premant spiritus ad pressuram criticalem,
+          tribus, duobus, modo,
+          capturam disiungens omnes spiritus fulgurales fortissime emittam,
+          \cantgrc{ἑκατοντάκις}---
+  \end{itemize}
+  % Come forth with the grace of Yggdrasil, piercing one.
+  \item \reconst{}Veniat percussio gratia Yggdrasil.
+        \magia{Gungnar}.
+  \item \reconst{}\magia{Fulguratio Divina}. % Divine Thunder
+  \item \reconst{}\magia{Fulguratio Nigrans}. % Black Thunder
+\end{itemize}
+
+\subsection{Ignis.}\label{ignis}
+
+\begin{itemize}
+  \item Omne flammans flamma purgatus,
+        domine exstinctionis et signum regenerationis,
+        in mea manu ens inimicum edat.
+        \magia{Flagrantia Rubicans}.
+  \item Ex somno existat, exurens saramandra, inimicum inuoluat igne.
+        \magia{Captus Flammeus}.
+  \item \cantgrc{Τὸ συμβόλαιον διακονείτω μοί, ὁ τύραννε ϕλογός,
+        ἐπιγενηθήτω, ϕλὸξ καθάρσεως, ϕλογίνη ῥομϕαία, ῥευσάντων πῦρ καὶ θεῖον, ἇ ἐπέϕλεγον Σόδομα, ἁμαρτεούς, εἰς χοῦν θανάτου.
+        \magiagrc*{Ουρανια Φλογωσις}.}
+  \item Agite, tenebræ abyssi, ensis incendens et incendium
+        caliginis umbræ inimicitiæ destructionis ultionis,
+        incendant et me et eum, sint solum incendentes.
+        \magia{Incendium Gehennæ}.
+  % *Obey the contract and serve me; gather, spirits of flame...
+  \item \reconst{}In pactione maneat et oboediat mihi, spiritus ignis, coeuntes \textelp{}
+        \magia{Apes Igniferæ}.
+  % *Open the nine locks, and come forth from the hoard of Lægjarn.
+  \item \reconst{}Veniant, cistæ Lægjarni, aperiens novem claves.
+        \magia{Gladius Diuinus Flammæ Ardentis}.
+\end{itemize}
+
+\subsection{Aquarius.}\label{aquarius}
+
+\begin{itemize}
+  \item Aer et aqua facti nebula huic/illis somnum breuem. \magia{Nebula Hypnotica}.
+  \item Ex somno existat, exundans Vndina, inimicum immergat in alueum. \magia{Vinctus Aquarius}.
+  \item \magia{Undans Paries Aquarius}.
+  \item \magia{Magna Cataracta}.
+\end{itemize}
+
+\subsection{Umbrosus.}\label{umbrosus}
+
+\begin{itemize}
+  \item \magia{Umbræ}.
+  \item \magia{Nocturna Nigredinis}.
+  \item \magia{Lorica Umbræ}.
+  \item \magia{Centum/Mille Lanceæ Umbræ}.
+  \item \magia{Umbræ Septemplex Paries Anti-Corporalis}.
+\end{itemize}
+
+
+\subsection{Gravis.}\label{gravis}
+
+\begin{itemize}
+  \item {Magna Confractio Dimensionis}.
+\end{itemize}
+
+\subsection{Sonorus.}\label{sonorus}
+\begin{itemize}
+  \item \magia{Cantus Bellax}.
+  \item \magia{Melodia Bellax De Bi-Festinando}.
+  \item \magia{Cantus Eleemosynes}.
+\end{itemize}
+
+
+\subsection{Obscurans.}\label{obscurans}
+
+\begin{itemize}
+  % *Come wind, dark spirits, clad in darkness, surge forth mind-devouring tyrant's howl.
+  % Dark's Dragon Breath.
+  \item \reconst{}Veniant spiritus aeriales
+        obscurantes, cum obscuratione exundent clamor tyranni edens corda.
+        \magia{Tenebræ Draconis Afflatus}.
+  \item \reconst\magiagrc*{Διος Τυκος Μελαν.}
+\end{itemize}
+
+
+\subsection{Glacialis.}\label{glacialis}
+
+\begin{itemize}
+  \item \reconst{}Spiritus glaciales aeriales, venientes et deurentes, erumpant auræ gelidæ. \magia{Niuis Casus}.
+  \item Veniant spiritus glaciales, extendantur aeri, tundram et glaciem loci noctis albæ. \magia{Crystallizatio Tellustris}.
+  \item Veniant spiritus glaciales obscurantes, cum obscuratione flet tempestas niualis. \magia{Niuis Tempestas Obscurans}.
+  \item \reconst{}In pactione maneat et oboediat mihi, regina glaciei,
+        ueniant, tenebræ sempiternæ, glaciarium æternum,
+        omnia in magnifico carcere glaciei includant.
+        \magia{Mundus Gelans}.%
+        \footnote{%
+          Verba temporalia subj.\ coniugantur, quæ imperat.\ scripta sunt.
+          \textquote{\textins*[M]agnific\emph{e}} perperam declinatum sit.
+        }
+  \item \cantgrc{Τὸ συμβόλαιον διακονείτω μοί, ἡ κρυστάλλινη βασίλεια, ἐπιγενηθήτω, ταἰώνιον ἔρεβος, αἱώνιε κρύσταλλε. \magiagrc*{Κοσμικη Κρυσταλλοπηγια.}}
+  \item \cantgrc{Τὸ συμβόλαιον διακονείτω μοί, ἡ κρυστάλλινη βασίλεια, ἐπιγενηθήτω, ταἰώνιον ἔρεβος, αἱώνιε κρύσταλλε, πάσαις ζωσαῖς τὸν ἴσον θάνατον, ὅς ἀταραξία. \magiagrc*{Κοσμικη Καταστροφη.}}
+  \item \magia{Ensis Exsequens}.
+  \item \magia{Gelidus Capulus}.
+  \item \magia{Malleus Aquilonis}.
+  % *Gather, ice spirits, become spears to rain down upon my enemies.
+  \item \reconst{}Coeant spiritus glaciales, facti aquæ magnæ pro iaculis, inimicum confodiant. \magia{Iaculatio Grandinis}.
+  % *Ice Saber Rondo.
+  \item \magia{\reconst{}Chorea Ensis Glacialis}.
+  % *Netherworld Icicle.
+  \item \reconst{}\magiagrc{Ο Κρυσταλλινος Κιων Του Αιδου.}
+  % *Come, ice spirits, burst and freeze...
+  \item \reconst{}*Coeant spiritus glaciales, conglacientur erumpentes \textelp{}
+  \item \cantgrc{\emph{Ὑπάκουσον} τὴν διαθήκην, \emph{ἄκουσόν} με,
+        αἰώνια βασίλισσα τοῦ σκότους καὶ τῆς χιόνος, ἠνθισμένα λευκὰ ῥόδα τοῦ πάγου, κῆπος ἀτέρμονος ἐν ὕπνῳ,
+        ἐπιγενηθήτω, ταἰώνιον ἔρεβος, αἱώνιε κρύσταλλε,
+        μετὰ τοῦ ψυχροῦ κεραυνοῦ \emph{συλλαβοῦ} τἄψυχα ὑποχείρια, θαυμαστὴ γαλήνη, λευκὰ ῥόδα ἠνθισμένα αἰώνιον δεσμωτήριον.
+        \magiagrc*{Απεραντος Λευκος Ουρανος.}}%
+        \footnote{
+          Multa verborum temporalium (\emph{italic.}) II.\ coniugantur sicut scripta sunt,
+          tam abnormia ut Eva.\ magiam (pseudo-erebeam?) pepererit;
+          perperam autem novitatibus Mundo Veto coniugata sint,
+          \textquote{\textgreek{ἐπιγενηθήτω}} enim III.\ coniugatur.
+        }
+  \item \reconst{}\cantgrc{Τὸ συμβόλαιον διακονείτω μοί, ἡ κρυστάλλινη βασίλεια,
+        ὦκα ἐπιγενηθήτω, γαληνὲ βασιλεία τῶν κρυστάλλινων ἀγρῶν τῶν χιλίων ἐτῶν,
+        λευκὰ ῥόδα τῆς ἀποσβέσεως ἀνθισάσθων.
+        \magiagrc*{Ανθος Παγετου Χιλιων Ετων.}}
+\end{itemize}
+
+
+\subsection{Terrester.}\label{terrester}
+
+\begin{itemize}
+  \item \cantgrc{Βασιλισκὲ γαλεώτε μετά κὦκτὼ ποδῶν καί κακοῖν ὀμμάτοιν, πνοῆν τοῦ ἰοῦ τόν χρόνον παραιροῦσαν. \magiagrc*{Πνοη Πετρας.}}
+  \item \cantgrc{Βασιλισκὲ γαλεώτε μετά κὦκτὼ ποδῶν καί κακοῖν ὀμμάτοιν, τὸ ϕῶς ἐμῇ χειρί καθίας τῷ κακῷ δέργματι τοξευσάτω. \magiagrc*{Κακον Ομμα Πετρωσεως.}}
+  \item \cantgrc{Τὸ τεῖχος διερξάσθω. \magiagrc*{Δορυ Πετρας.}}
+  \item \magiagrc{Αιωνιον Πετρωσις.}
+  \item \magiagrc{Μελαν Και Σφαιρικον Δεσμωτηριον.}
+  \item \cantgrc{Ω, Ταρτάρῳ κείμενον βασίλειον νεκρῶν, φαινσασθω ἡμῖν. \magiagrc*{Ο Μονολιθος Κιων Του Αιγου.}}
+  \item \magia{Circulus Pirorum Nigrorum}.
+  \item \magia{Mille Gladii Obsidiani}.
+  \begin{itemize}
+    \item ---, \reconst{}\magia{Vortices Obsidianorum}. % *Obsidian Spiral.
+  \end{itemize}
+  \item \magia{Cataracta Quæ Diuidit Terram}.
+  % *Obey the contract, obey me, king of hades;
+  % come cracking the earth, torrent of scorching heat engulfing the furthest reaches;
+  % seethe, surge forth, earth god of brilliant burning ruination.
+  \item \reconst{}In pactione maneat et oboediat mihi, rex Gehenæ, diuidens terram eniat cataracta incendii omnia sepeliens, ferueat et undet ardens Tartare. \magia{Terra Findens}.
+  \item \magia{Lapis Niger}.
+  % *Stone Snake.
+  \item \reconst{}\magiagrc{Οφις Πετρας.}
+  % *Curtain of Night-Harpoons to Pierce the Leviathan.
+  \item \reconst{}\magia{Noctis Harpagæ Velantes Perforantes Leuiathan}.
+\end{itemize}
+
+\subsection{Februarius.}\label{februarius}
+
+\begin{itemize}
+  \item \magia{Februo.}
+\end{itemize}
+
+
+\chapter{Quan.}\label{quan}
+
+\begin{itemize}
+  \item \magia{Sagitta Magica Series Lucis / Conuergentia Lucum,} \magiajp{桜華崩拳}[Iing Hua Beng Quan].
+  \item \magia{Sagitta Magica Series Lucis,} \magiajp{桜華槍衝}.
+  \item \magia{Sagitta Magica Aer Capturæ,} \magiajp{風華崩拳}.
+  \item \magia{Sagitta Magica Series/Conuergentia Fulguralis,} \magiajp{雷華崩拳}[Lei Hua Beng Quan].
+\end{itemize}
+
+\chapter{Magia Erebea.}\label{magia-erebea}
+\magia{Actus Noctus Erebeæ}.
+\noindent
+Dextra/Sinistra emittam \magiaarg{\magia{Magia}}, stagnet, complexio, (supplementum) pro armatione, \magiaarg{\magia{Magia Erebea}}.
+
+\section{Ignis.}\label{erebea-ignis}
+
+\begin{itemize}
+  \item \textelp{} \magia{Incendium Gehennæ}, stagnet, complexio, s.~p.~A., \magia{Sim Fabricatus Ab Incendio}.
+\end{itemize}
+
+\section{Fulguralis.}\label{erebea-fulguralis}
+
+\begin{itemize}
+  \item Dex.\ emittam \magia{Sagitta Magica Series Lucis}, \magiajp{桜華崩拳}.
+  \item \textelp{} \magia{Iaculatio Fulgoris}, supplementum, dextra emittam \textelp{}
+  \item \textelp{} \magia{Iouis Tempestas Fulguriens}, stagnet, complexio, s.~p.~A., \magia{Agilitas Fulminis}.
+  \item Emittam et stagnet \magiagrc{Χιλιπλ' Αστραπη}, complexio, s.~p.~A.,
+        \magiagrc{Η Αστραπη Υπερ Ουρανου Μεγα Δυναμενη}.
+        Perfectus plasmationis per emissionem.
+        \magiajp{千磐破雷}[Tihaiaburu Icadzuti].
+\end{itemize}
+
+
+\subsection{Duplex Complexio.}\label{duplex-complexio}
+
+\begin{itemize}
+  \item Sin.\ emissa stagnet \magiagrc{Χιλιπλ' Αστραπη}, dex.\ emissa stagnet \magiagrc{Χιλιπλ' Αστραπη}, duplex complexio, s.~p.~A., \magiagrc{Τ'Αστραπα Υπερ Ουρανου Μεγα Δυναμενa}.
+\end{itemize}
+
+\subsection{Unisonantia.}\label{unisonantia}
+
+\begin{itemize}
+  \item Duabus emissæ, dex.\ stagnans \magiagrc{Χιλιπλ' Αστραπη}, sin.\ stagnans \magia{Iaculatio Fulgoris}, unisonent, \cantgrc{Διὸς λόγχη \magiagrc*{Τιτανοκτονον}}.
+  \begin{itemize}
+    \item \textelp{} emittens \cantgrc{Διὸς λόγχῃ, \magiagrc{Χιλιπλην Αστραπην}} producam.
+  \end{itemize}
+  \item \magiajp{黒龍雷迎}[Hei Long Lei Ying].
+  \item \magia{Halebarda Fulgoris}.
+  \item Emittam et stagnet, \magia{Iouis Tempestas Fulguriens}, \magiajp{Iaculatio Fulgoris}, unisonent, \magiagrc*{Τιτανοκτονον} II--\magia{Iaculatio Vorticis Tempestatis}.
+  \begin{itemize}
+    \item \textelp{} emittam, \magia{Turbo Fulgoris Perforantis}.
+  \end{itemize}
+
+\end{itemize}
+
+
+\section{Glacialis.}\label{erebea-glacialis}
+
+\begin{itemize}
+  \item Emissa stagnet \magiagrc{Ανθος Παγετου Χιλιων Ετων}, complexio, s.~p.~A., \magiagrc{Κρυσταλλινη Βασιλεια}.
+\end{itemize}
+
+
+\section{Absorptio.}\label{absorptio}
+
+\begin{itemize}
+  \item Agite extractio, Negica Magia Erebea \magia{Circuli Absorptionis}, stagnet, complexio, dex./sin.\ emissa \magia{Sagitta Magica Conuergentia Fulguralis}---
+  \begin{itemize}
+    \item \textelp{} plus \textenglish{Racan power}, \magiajp{雷華崩拳}.
+    \item \textelp{} plus \magia{Mundus Gelans}, dextra emissa \magiagrc{Τιτανοκτονον}, \textelp{}
+  \end{itemize}
+\end{itemize}
+
+
+\chapter{Pactio.}\label{pactio}
+
+\reconst{}\emph{Mea interprete, minister \magiaarg{Domini} in pactione manet.}%
+\footnote{%
+  Ex titiato Akamatsu., 2011-03-26,
+  \url{https://twitter.com/KenAkamatsu/status/51642815993745408}.
+}
+---Albert Chamomile
+
+\begin{itemize}
+  \item \magia{Pactio}.
+  \item \magia{Sis Mea Pars} /
+        \reconst{}\magia{Sitis Meæ Partes}
+        per \magiaarg{n} secundas,
+        ministra/-ter/-træ/-tri \magiaarg{Domini}, \magiaarg{Nomen}.---\magia{Sim Tua Pars}.%
+        \footnote{
+          \textquote{Si\emph{ſ}tis} fuisse scriptum est, quod perperam coniugatum sit.
+        }
+  \item \magia{Sim Ipse Pars} per \magiaarg{n} secundas, \magiaarg{Nomen}.
+  \item \reconst{}\magia{Mea Pars Dures} /
+        \magia{Meæ Partes Duretis Additionale} per \magiaarg{n} secundas, ministra/-ter/-træ/-tri \magiaarg{Domini}, \magiaarg{Nomen}.
+  \item \magia{Ipse Pars Durem Additionale} per \magiaarg{n} secundas, \magiaarg{Nomen}.
+  \item \magia{Telepathia}.
+  \item \magia{Euocem Te/Vos}, ministra/-ter/-træ/-tri \magiaarg{Domini}, \magiaarg{Nomen}.
+  \item \magia{Excerceas Potentiam}, \magiaarg{Nomen}, \magiaarg{Artifactum}.
+  \item Ego \magiaarg{Nomen} in hoc nomine imperem \textelp{}
+
+\end{itemize}
+\section{Vera Pactio.}\label{vera-pactio}
+\reconst{}Spiritus pactionis qui præstat mundo,
+ad euocationem meam respondeat;
+ego lege uniuersi inter me et amicum meum
+uinculum adamantis immortalis magnifici animi iungam.
+\magia{Vera Pactio.}%
+\footnote{%
+  Nonnulla verborum temporalium subj.\ coniugantur,
+  quæ \textquote{respond\emph{e}} (imperat.) \& \textquote{iung\emph{o}} (ind.) fuisse sonatus sunt.
+  Ceterum \textquote{uinculum adamant\emph{i} immortalis}, i.e.\ acc.-\emph{dat.}-gen.,
+  quæ perperam declinatum sit;
+  significantissimum sit
+  \textquote{uinculum adamant\emph{eum} immortal\emph{e}},
+  cf.~Eng.\ \foreigntextquote{english}{adamantine bond}.
+}
+
+
+\section{Charta Ministralis.}\label{charta-ministralis}
+\magia{Adeat/-ant}.---\magia{Abeat/-ant}.
+
+\subsection{Artifactum.}\label{artifactum}
+
+\begin{enumerate}
+  \renewcommand\labelenumi{\Roman{enumi}.}
+
+  \item Vmbra Inuisibilis.
+  \item Strenuus Arcarius: \artifact{Iris Tormentum}.
+  \item Reportatrix Denudans: \artifact{Oculus Coruinus}.
+  \item Philosophastra Illustrans: \artifact{Orbis Sensualium Pictus}.
+  \item Cultrix cum Traumate.
+  \item Siren Valida.
+  \item Hilaratrix Accensa.
+  \item Bellatrix Sauciata: \artifact{Ensis Exorcizans}.
+
+        \begin{itemize}
+          \item \magiagrc*{Τομη Αρχης Και Αναρχιας}.
+        \end{itemize}
+
+  \item Ioculatrix Monachans.
+  \item Pupa Somnians: \textsc{type-2130 Chao Bao Zi} Satellite Support System \magia{al-Iskandariyah}.
+  \item Hilaratrix Durans.
+  \item Pugilatum Exercens: \artifactjp{神珍鐵自在棍}[Shen Zhen Tie Zi Zai Gun].
+  \item Regina Medicans:
+
+        \begin{itemize}
+          \item \artifactjp{東風之檜扇}[Coti No Hiogi][Flabellum Euri].
+          \item \artifactjp{南風之末廣}[Hae No Suehiro][Flabellum Australe].
+          \item \reconst{}\magiajp{氣吹戸大祓: 高天原爾神留坐神漏伎神漏彌命以皇神等前爾白久苦患吾友乎護惠比幸給閉止藤原朝臣木乃香能生魂乎宇豆乃幣帛爾備奉事乎諸聞食}.%
+                \footnote{%
+                  Deest \textquote{近衞}, quod est scriptum in \textquote{藤原朝臣近衞木乃香}: cognomen non ritui opportunum est, sed nomen gentis solum.
+                }
+        \end{itemize}
+
+  \item Fictrix Comica: \artifact{Imperium Graphices}.
+  \item Gladiaria Alata: \artifactjp{匕首・十六串呂}[Sica Sisicusiro].
+  \item Armatura Quinquiplex: \artifact{Liberum Lemniscus}
+  \item Hilaratrix Fortunans.
+  \item Vulnerans Semidiaboli.
+  \item Polymathes Vniversalis.
+  \item Speculatrix Clandestina: \artifactjp{天狗之隠蓑}[Tengu No Cacuremino].
+  \item Seruatrix Stellarum.
+  \item Geminæ Simulatrices.
+  \item Geminæ Simulatrices.
+  \item Machinatrix Insana.
+        \begin{itemize}
+          \item \cantgrc{
+                \textelp{} ὁ δὲ κόσμος κινεῖται ἐν τῷ αἰῶνι, ὁ δὲ χρόνος περαιοῦται ἐν τῷ κόσμῳ, ἡ δὲ γένεσις γίνεται ὲν τῷ χρόνῳ.}
+          \item \cantgrc{
+                Ἔμοιγε χρηματισάντων δώδεκα ἱέρειαι \textelp{}
+                Πυὸ, Λοῦοιαν, Ὕγγαν, Ἄνγκωρ \textelp{},
+                οὐ ζωὴ ὁρίζει σύνεσιν, ἀλλὰ σύνεσις ζωήν.}
+        \end{itemize}
+
+  \item Idolum Virtuale: \artifact{Sceptrum Virtuale}.
+        \begin{itemize}
+          \item
+                Nihil nullum zefirum, spiritus magnus unum,
+                spiritus electronice, nantur super aquas.
+                \magia{Ego Electrium Regno}.%
+                \footnote{%
+                  Nota bene \textquote{Regn\emph{o}}, ind., quo dignum est.
+                }
+          \item \textenglish{\magia{Paquet Filtering}.}
+        \end{itemize}
+
+  \item Magistra Puparum.
+  \item Pudica Bibliothecaria: \artifact{Diarium Eius}.
+        \begin{itemize}
+          \item \magia{Diaria Eius Minora} \magiaarg{multi-pla} adeant tum cogitationes uestigent de \magiaarg{Nominibus}.
+          \item \magiajp{我汝ノ真名ヲ問フ}[Anata No O-Namae Nan Desu Ca].
+          \item \magia{Deletus}.
+        \end{itemize}
+
+  \item Actrix Timida: \artifact{Adiutor Solitarius}.
+  \item Burgensis Florens.
+  \item Coqua Fabulosa.
+  \item Primaria in Diabolimundo.
+
+  \setcounter{enumi}{495}
+  \item Magistrulus Magi: \artifact{Mille Vincula}.
+  \setcounter{enumi}{1000}
+  \item Bibliothecarius Ironicus.
+  \setcounter{enumi}{1000}
+  \item Armiger Milliplex.
+\end{enumerate}
+
+\subsection{Tonus.}\label{tonus}
+
+\begin{itemize}
+  \item Rubor.
+  \item Luteum.
+  \item Roseum.
+  \item Flauum.
+  \item Viride.
+  \item Cærulum.
+  \item Cyaneum.
+  \item Hyacinthus.
+  \item Viola.
+  \item Purpura.
+  \item Nigror.
+  \item Album.
+  \item Argentum.
+  \item Aurum.
+  \item Prisma.
+\end{itemize}
+
+\subsection{Virtus.}\label{virtus}
+
+\begin{itemize}
+  \item Sapientia.
+  \item Audacia.
+  \item Temperantia.
+  \item Iustitia.
+  \item Fides.
+  \item Spes.
+  \item Caritas.
+\end{itemize}
+
+\subsection{Directio.}\label{directio}
+
+\begin{itemize}
+  \item Oriens.
+  \item Occidens.
+  \item Auster.
+  \item Septentrio.
+  \item Centrum.
+\end{itemize}
+
+\subsection{Astralitas.}\label{astralitas}
+
+\begin{itemize}
+  \item Sol.
+  \item Luna.
+  \item Mercurius.
+  \item Venus.
+  \item Tellus.
+  \item Mars.
+  \item Iupiter.
+  \item Saturnus.
+  \item Vranus.
+  \item Neptunus.
+  \item Pluto.
+  \item Ceres.
+  \item Pallas.
+  \item Iuno.
+  \item Vesta.
+  \item Cælus sideralis.
+  \item Crux septentrionalis.
+  \item Cometes.
+  \item Fax.
+  \item Nigrum foramen.
+\end{itemize}
+
+
+\backmatter
+\chapter{Commemorationes.}\label{sources}
+\newcommand{\bookname}[1]{\textenglish{\emph{#1}}}
+Ken Akamatsu, \bookname{Maho Sensei Negima!} \& \bookname{UQ HOLDER!\@ Maho Sensei Negima!~2}, 2003--.
+
+\section*{Magici.}\label{source-magia}
+\subsection*{Situs Vitales.}\label{active-websites}
+
+\begin{itemize}
+  \item \href{http://www2u.biglobe.ne.jp/~clown/}{Ken Akamatsu Works Research Institute} per Piero. % [JP]
+  \item \href{http://tuwabuki20.blog5.fc2.com/}{Shigure no Seisaku Nikki} per Shigure. % [JP]
+  \item \href{https://vetus.wordpress.com/}{Vetus} per Canon.
+\end{itemize}
+
+\subsection*{Situs Veteres.}\label{oldies}
+
+\begin{itemize}
+  \item \href{http://www.genvid.com/diesgaudii/latin/ln/index.html}{Latinitas Negimaria} (deest, nec in archivis interret.).
+  \item \href{https://blog.goo.ne.jp/masaxa}{Mo So Baku Chiku} per Masaxa. % [JP]
+  \item \href{https://web.archive.org/web/20150419192906/http://www7b.biglobe.ne.jp/~meril/index.html}{Negima! Emotion} in archivo interret. % [JP]
+  \item \href{https://blog.goo.ne.jp/lowtech224}{Negima! no Latin go?} % [JP]
+  \item \href{https://asacha.hatenadiary.org/}{Sozo to Kyoyu} per Asacha. % [JP]
+\end{itemize}
+
+\section*{Lexici.}\label{lexicons}
+
+\begin{itemize}
+  \item Kichinosuke Kunihara†, \bookname{Koten Latin Go Jiten}, 2005. % [JP]
+  \item \href{https://github.com/mk270/whitakers-words}{William Whitaker's Words} per William A.\ Whitaker†, nunc Martin Keegan continetur.
+  \item \href{http://www.perseus.tufts.edu/hopper/search}{Perseus Search Tools}.
+\end{itemize}
+
+\end{document}
