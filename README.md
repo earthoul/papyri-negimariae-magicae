@@ -1,6 +1,10 @@
 # Papyri Negimariae Magicae
 Book of spells for Ken Akamatsu's *Negima!* series in Mundus Magicus style.
 
+## Features
+- Written in Latin language, including annotations, along with Greek & CJK incantations;
+- Contains reconstructions of incantations, marked with an asterisk (\*), based on *Negima!* fandom. (Hope they'll get official transcriptions someday!)
+
 ## Compatibility
 The source code is currently compatible with LuaLaTeX + [EB Garamond](https://github.com/georgd/EB-Garamond) ("original", v0.016) by Georg Duffner, not with [EB Garamond 12](https://github.com/octaviopardo/EBGaramond12) by Duffner & Octavio Pardo.
 
