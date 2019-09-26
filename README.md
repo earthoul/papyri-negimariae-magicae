@@ -9,3 +9,6 @@ MIT. The compiled PDF will also contain:
 
 - EB Garamond (c) 2010-2013 Georg Duffner, under SIL Open Font License 1.1;
 - [IPAex Fonts](https://ipafont.ipa.go.jp/ipa_font_license_v1-html) (c) Information-technology Promotion Agency, Japan, under IPA Font License Agreement 1.0.
+
+## To-dos
+- Add an educational / Mundus Vetus edition with more diacritics. 
