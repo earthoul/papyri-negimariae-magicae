@@ -15,4 +15,5 @@ MIT. The compiled PDF will also contain:
 - [IPAex Fonts](https://ipafont.ipa.go.jp/ipa_font_license_v1-html) (c) Information-technology Promotion Agency, Japan, under IPA Font License Agreement 1.0.
 
 ## To-dos
-- Add an educational / Mundus Vetus edition with more diacritics. 
+- Add an educational / Mundus Vetus edition with more diacritics such as [macrons](https://en.wikipedia.org/wiki/Macron_(diacritic));
+- Add more Eastern spells/incantations.
