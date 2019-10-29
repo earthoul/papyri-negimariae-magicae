@@ -16,6 +16,7 @@ MIT. The compiled PDF will also contain:
 
 ## To-dos
 - Add an educational / Mundus Vetus edition with more diacritics such as [macrons](https://en.wikipedia.org/wiki/Macron_(diacritic));
+- Renew u/v handling by creating custom switching features or inputting manually or whatever;
 - Add more Eastern spells/incantations.
 
 ## Changelogs
