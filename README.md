@@ -16,4 +16,16 @@ MIT. The compiled PDF will also contain:
 
 ## To-dos
 - Add an educational / Mundus Vetus edition with more diacritics such as [macrons](https://en.wikipedia.org/wiki/Macron_(diacritic));
+- Renew u/v handling by creating custom switching features or inputting manually or whatever;
 - Add more Eastern spells/incantations.
+
+## Changelogs
+### v0.8.0.1
+2019-10-29
+
+- Fix typos along with adjustments for u/v switches.
+
+### v0.8.0
+2019-09-26 / 10-23 (tagged)
+
+- The First public pre-release.
