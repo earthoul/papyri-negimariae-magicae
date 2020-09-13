@@ -3,10 +3,10 @@
 \documentclass[12pt]{book}
 \usepackage{xparse}
 \usepackage[sc]{titlesec}
-\usepackage{fontspec}
-\usepackage{luatexja}
+% \usepackage{fontspec} % included in luatexja-preset
+\usepackage[haranoaji]{luatexja-preset}
 \usepackage{polyglossia}
-\ltjsetparameter{jacharrange={-2,-3}}
+\ltjsetparameter{jacharrange={-2,-3,-9}}
 % \defaultfontfeatures{
 %   now defined in .fontspec file
 % }
