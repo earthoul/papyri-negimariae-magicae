@@ -12,7 +12,7 @@ The source code is currently compatible with LuaLaTeX + [EB Garamond](https://gi
 MIT. The compiled PDF will also contain:
 
 - EB Garamond (c) 2010-2013 Georg Duffner, under SIL Open Font License 1.1;
-- [IPAex Fonts](https://ipafont.ipa.go.jp/ipa_font_license_v1-html) (c) Information-technology Promotion Agency, Japan, under IPA Font License Agreement 1.0.
+- [Harano Aji Fonts](https://github.com/trueroad/HaranoAjiFonts/) (c) 2019–2020 Masamichi Hosoda, under SIL Open Font License 1.1.
 
 ## To-dos
 - Add an educational / Mundus Vetus edition with more diacritics such as [macrons](https://en.wikipedia.org/wiki/Macron_(diacritic));
@@ -20,6 +20,12 @@ MIT. The compiled PDF will also contain:
 - Add more Eastern spells/incantations.
 
 ## Changelogs
+### v0.8.1.0
+2020-xx-xx
+
+- Change the CJK font from IPAex from Harano Aji.
+- Support the latest LuaTeX-ja package.
+
 ### v0.8.0.1
 2019-10-29
 
