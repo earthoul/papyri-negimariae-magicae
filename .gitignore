@@ -1,0 +1,31 @@
+# Created by https://www.toptal.com/developers/gitignore/api/latex,windows
+# Edit at https://www.toptal.com/developers/gitignore?templates=latex,windows
+
+### LaTeX ###
+## Core latex/pdflatex auxiliary files:
+*.aux
+*.lof
+*.log
+*.lot
+*.fls
+*.out
+*.toc
+*.fmt
+*.fot
+*.cb
+*.cb2
+.*.lb
+
+## Build tool auxiliary files:
+*.fdb_latexmk
+*.synctex
+*.synctex(busy)
+*.synctex.gz
+*.synctex.gz(busy)
+*.pdfsync
+
+## Ignore PDF for the moment:
+*.pdf
+
+## Ignore local .txt files:
+*.txt
