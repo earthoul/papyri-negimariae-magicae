@@ -8,6 +8,11 @@
 \usepackage{polyglossia}
 \ltjsetparameter{jacharrange={-2,-3,-9}}
 
+% add custom font features
+\directlua{
+  dofile("la.lua")
+}
+
 \defaultfontfeatures{
   % Contextuals = Alternate, % default
   Ligatures = {TeX, Historic},
@@ -23,6 +28,7 @@
 \setmainfont[
   Script = Latin,
   Language = Latin,
+  RawFeature = +uvla, % apply custom font feature(s)
 ]{Libertinus Serif}
 % \newfontfamily\englishfont[
 %   Script = Default,
