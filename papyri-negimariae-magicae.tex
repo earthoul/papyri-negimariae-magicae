@@ -7,9 +7,15 @@
 \usepackage[haranoaji]{luatexja-preset}
 \usepackage{polyglossia}
 \ltjsetparameter{jacharrange={-2,-3,-9}}
-% \defaultfontfeatures{
-%   now defined in .fontspec file
-% }
+
+\defaultfontfeatures{
+  % Contextuals = Alternate, % default
+  Ligatures = {TeX, Historic},
+  Numbers = {Proportional, OldStyle},
+  ItalicFeatures = {
+    CharacterVariant = {6}, % ampersand
+  },
+}
 \setdefaultlanguage[variant=medieval]{latin}
 \setotherlanguage{english}
 \setotherlanguage[variant=ancient]{greek}
@@ -17,30 +23,35 @@
 \setmainfont[
   Script = Latin,
   Language = Latin,
-]{My Gar 12}
-\newfontfamily\englishfont[
-  Script = Default,
-  Language = Default,
-  StylisticSet = 1,
-]{My Gar 12}
+]{Libertinus Serif}
+% \newfontfamily\englishfont[
+%   Script = Default,
+%   Language = English,
+%   StylisticSet = {5}, % wide W
+% ]{Libertinus Serif}
 \newfontfamily\cyrillicfont[
   Script = Cyrillic,
-  Language = Default,
-]{My Gar 12}
+  Language = Russian,
+]{Libertinus Serif}
 \newfontfamily\greekfont[
   Script = Greek,
-  Language = Default,
-]{My Gar 12}
+  Language = Polytonic Greek,
+]{Libertinus Serif}
+
 \usepackage{csquotes}
-\DeclareQuoteStyle{latin}
+\DeclareQuoteStyle[variant=medieval]{latin}
   {\guillemotleft}{\guillemotright}
   {\guilsinglleft}{\guilsinglright}
+
 \renewcommand{\bfseries}{\scshape}
+
 \newcommand{\mymarkfont}[1]{\textnormal{\textsc{#1}}}
 \renewcommand{\chaptermark}[1]{\markboth{\mymarkfont{\chaptername\ \thechapter.\ #1}}{}}
 \renewcommand{\sectionmark}[1]{\markright{\mymarkfont{\thechapter.\thesection.\ #1}}}
+
 \newcommand{\reconst}{*}
-\newcommand{\ennote}[1]{\textenglish{[EN] #1}}
+% \newcommand{\ennote}[1]{\textenglish{[EN] #1}}
+
 \NewDocumentCommand \cantgrc { m } {\textgreek{#1}}
 \NewDocumentCommand \magia { m } {\textsc{#1}}
 \NewDocumentCommand \magiaact { m } {\emph{#1}}
@@ -63,27 +74,31 @@
     \IfBooleanTF{#1}
       {\magia{#2}}
       {\textgreek{\magia{#2}}}}
+
 \usepackage{hyperref}
 \hypersetup{
   pdftitle={Papyri Negimariæ Magicæ},
   breaklinks=true,
 }
-\newcommand{\myver}{0.8.0.1}
-\newcommand{\mydate}{2019-10-29\\\textenglish{v\myver}}
+
+\newcommand{\myver}{0.8.1.0-alpha}
+\newcommand{\mydate}{\today \\\textenglish{v\myver}}
 \newcommand{\mytitle}{\textsc{Papyri Negimariæ Magicæ.}}
 \newcommand{\myname}{Kensuke Sano.}
+
 \title{\mytitle}
 \date{\mydate}
 \author{\myname}
 
-
+% ----- BEGIN DOCUMENT
 \begin{document}
 
+% ----- Front matter
 \frontmatter
-
 \maketitle
 \tableofcontents
 
+% ----- Main matter
 \mainmatter
 
 \chapter{Actuatio.}\label{actuatio}

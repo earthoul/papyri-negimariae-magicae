@@ -6,13 +6,13 @@ Book of spells for Ken Akamatsu's *Negima!* series in Mundus Magicus style.
 - Contains reconstructions of incantations, marked with an asterisk (\*), based on *Negima!* fandom. (Hope they'll get official transcriptions someday!)
 
 ## Compatibility
-The source code is currently compatible with LuaLaTeX + [EB Garamond](https://github.com/georgd/EB-Garamond) ("original", v0.016) by Georg Duffner, not with [EB Garamond 12](https://github.com/octaviopardo/EBGaramond12) by Duffner & Octavio Pardo.
+The source code is currently compatible with LuaLaTeX & [Libertinus](https://github.com/alerque/libertinus), both bundled in TeX Live.
 
 ## License(s)
 MIT. The compiled PDF will also contain:
 
-- EB Garamond (c) 2010-2013 Georg Duffner, under SIL Open Font License 1.1;
-- [Harano Aji Fonts](https://github.com/trueroad/HaranoAjiFonts/) (c) 2019–2020 Masamichi Hosoda, under SIL Open Font License 1.1.
+- Libertinus Fonts (c) 2012– Caleb Maclennan et al., under SIL Open Font License 1.1;
+- [Harano Aji Fonts](https://github.com/trueroad/HaranoAjiFonts/) (c) 2019– Masamichi Hosoda, under SIL Open Font License 1.1.
 
 ## To-dos
 - Add an educational / Mundus Vetus edition with more diacritics such as [macrons](https://en.wikipedia.org/wiki/Macron_(diacritic));
@@ -23,6 +23,7 @@ MIT. The compiled PDF will also contain:
 ### v0.8.1.0
 2020-xx-xx
 
+- Change the main font from EB Garamond from Libertinus.
 - Change the CJK font from IPAex from Harano Aji.
 - Support the latest LuaTeX-ja package.
 
