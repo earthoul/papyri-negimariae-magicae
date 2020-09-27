@@ -3,6 +3,8 @@
 \documentclass[12pt]{book}
 \usepackage{xparse}
 \usepackage[sc]{titlesec}
+\usepackage{textcase}
+
 % \usepackage{fontspec} % included in luatexja-preset
 \usepackage[haranoaji]{luatexja-preset}
 \usepackage{polyglossia}
@@ -59,7 +61,11 @@
 % \newcommand{\ennote}[1]{\textenglish{[EN] #1}}
 
 \NewDocumentCommand \cantgrc { m } {\textgreek{#1}}
-\NewDocumentCommand \magia { m } {\textsc{#1}}
+\NewDocumentCommand \magia { s m }
+  {%
+    \IfBooleanTF{#1}
+      {\MakeTextUppercase{#2}}
+      {\textsc{#2}}}
 \NewDocumentCommand \magiaact { m } {\emph{#1}}
 \NewDocumentCommand \artifact { m } {\magia{#1}}
 \NewDocumentCommand \magiaarg { m } {\emph{#1}}
@@ -78,8 +84,8 @@
 \NewDocumentCommand \magiagrc { s m }
   {%
     \IfBooleanTF{#1}
-      {\magia{#2}}
-      {\textgreek{\magia{#2}}}}
+      {\magia*{#2}}
+      {\textgreek{\magia*{#2}}}}
 
 \newcommand{\bookname}[1]{\textenglish{\emph{#1}}}
 
@@ -92,7 +98,7 @@
 \newcommand{\myver}{0.8.1.0-alpha}
 \newcommand{\mydate}{\today \\\textenglish{v\myver}}
 \newcommand{\mytitle}{\textsc{Papyri Negimariæ Magicæ.}}
-\newcommand{\myname}{Kenſuke Sano.}
+\newcommand{\myname}{\textsc{Kenſuke Sano.}}
 
 \title{\mytitle}
 \date{\mydate}
@@ -215,7 +221,7 @@ Artis ſpecialis \magiaarg{Flos Nocticulus}, limitatus per triginta ſecundas,
 \subsection{Sagitta Magica.}\label{sagitta-magica}
 
 \begin{itemize}
-  \item \magia{Sagitta Magica Una Lux/Fulguratio/Ignis}.
+  \item \magia{Sagitta Magica Una Lux / Fulguratio / Ignis}.
   \item \magiaarg{N}~ſpiritus lucis, coeuntes ſagittent inimicum / inimicos ſagittent. \magia{S.~M.~Series Lucis / Conuergentia Lucum}.
   \item \textelp{} \magia{Series Obſcuri}.
   \item \textelp{} \magia{Series Sabulonis}.
