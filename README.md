@@ -23,9 +23,9 @@ MIT. The compiled PDF will also contain:
 ### v0.8.1.0
 2020-xx-xx
 
-- Change the main font from EB Garamond from Libertinus.
-- Change the CJK font from IPAex from Harano Aji.
-- Support the latest LuaTeX-ja package.
+- Change the main font from EB Garamond to Libertinus.
+- Change the CJK font from IPAex to Harano Aji.
+- Support the latest [LuaTeX-ja package](https://www.ctan.org/pkg/luatexja).
 
 ### v0.8.0.1
 2019-10-29
