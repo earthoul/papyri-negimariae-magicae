@@ -20,7 +20,7 @@ MIT. The compiled PDF will also contain:
 
 ## Changelogs
 ### v0.8.1.0
-2020-xx-xx
+2020-10-03
 
 - Change the main font from EB Garamond to Libertinus.
 - Change the CJK font from IPAex to Harano Aji.
