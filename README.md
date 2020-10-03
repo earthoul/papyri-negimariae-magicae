@@ -6,7 +6,7 @@ Book of spells for Ken Akamatsu's *Negima!* series in Mundus Magicus style.
 - Contains reconstructions of incantations, marked with an asterisk (\*), based on *Negima!* fandom. (Hope they'll get official transcriptions someday!)
 
 ## Compatibility
-The source code is currently compatible with LuaLaTeX & [Libertinus](https://github.com/alerque/libertinus), both bundled in TeX Live.
+The source code is currently compatible with LuaLaTeX & [Libertinus](https://github.com/alerque/libertinus) as well as the package dependencies (see the preamble of the TeX file), all bundled in TeX Live. It also contains CJK characters handled by [LuaTeX-ja](https://www.ctan.org/pkg/luatexja) & runs custom Lua scripts.
 
 ## License(s)
 MIT. The compiled PDF will also contain:
@@ -24,7 +24,9 @@ MIT. The compiled PDF will also contain:
 
 - Change the main font from EB Garamond to Libertinus.
 - Change the CJK font from IPAex to Harano Aji.
-- Support the latest [LuaTeX-ja package](https://www.ctan.org/pkg/luatexja).
+- Add & remove scripts for better typesetting with those fonts.
+- Support the latest LuaTeX-ja package.
+- Fix minor oversights.
 
 ### v0.8.0.1
 2019-10-29
